@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div>
+    <h1 class="display-4 text-white font-italic text-center">Borrar o modificar INFORMES de la base de datos:</h1>
+</div>
+
+
+<div class="container">
+
+    <form action="/MySQl_Informe_eliminar" method="POST">
+        <div class="form-group text-white">
+            <label for="exampleInputPassword1">Nombre del informe a Borrar:</label>
+            <input name="numeroDI" type="text" class="form-control" placeholder="Username" aria-label="Username"
+                aria-describedby="basic-addon1">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+</div>
+
+<div>
+    <hr class="my-4">
+</div>
+
+<div class="m-3 text-white font-weight-light">
+    <h2>Vista de los informes en la base de datos:</h2>
+</div>
+
+<div class="container text-center font-italic">
+
+    <div class="row ">
+        <div class="col-md-6 border border-dark rounded p-3 mb-2 bg-primary text-white">
+            <h4>Nombre del paciente (Total {{long}})</h4>
+        </div>
+        <div class="col-6 col-md-6 border border-dark rounded p-3 mb-2 bg-primary text-white">
+            <h4>Informe</h4>
+        </div>
+        <!-- <div class="col-6 col-md-4 border border-dark rounded p-3 mb-2 bg-primary text-white">
+            <h4>Imagen</h4>
+        </div> -->
+
+    </div>
+    <div class="row ">
+        <div class="col border border-dark rounded p-3 mb-2 bg-light text-dark">
+            <h4>{{parametro1}}</h4>
+        </div>
+        <div class="col border border-dark rounded p-3 mb-2 bg-light text-dark text-break">
+            <h4>{{parametro2}}</h4>
+            
+
+        </div>
+        <!-- <div class="col border border-dark rounded p-3 mb-2 bg-light text-dark">
+         
+            <a class="btn btn-outline-success btn-lg" href="{{ url_for('Ima1') }}" role="button">Visualizar imagen</a>
+        </div> -->
+        
+
+    </div>
+    <div class="row ">
+        <div class="col border border-dark rounded p-3 mb-2 bg-light text-dark">
+            <h4>{{parametro3}}</h4>
+        </div>
+        <div class="col border border-dark rounded p-3 mb-2 bg-light text-dark text-break">
+            <h4>{{parametro4}}</h4>
+        </div>
+        <!-- <div class="col border border-dark rounded p-3 mb-2 bg-light text-dark">
+            <a class="btn btn-outline-success btn-lg" href="{{ url_for('Ima2') }}" role="button">Visualizar imagen</a>
+        </div> -->
+
+    </div>
+    <div class="row ">
+        <div class="col border border-dark rounded p-3 mb-2 bg-light text-dark">
+            <h4>{{parametro5}}</h4>
+        </div>
+        <div class="col border border-dark rounded p-3 mb-2 bg-light text-dark text-break">
+            <h4>{{parametro6}}</h4>
+        </div>
+        <!-- <div class="col border border-dark rounded p-3 mb-2 bg-light text-dark">
+            <a class="btn btn-outline-success btn-lg" href="{{ url_for('Ima3') }}" role="button">Visualizar imagen</a>
+        </div> -->
+
+    </div>
+    <div class="row ">
+        <div class="col border border-dark rounded p-3 mb-2 bg-light text-dark">
+            <h4>{{parametro7}}</h4>
+        </div>
+        <div class="col border border-dark rounded p-3 mb-2 bg-light text-dark text-break">
+            <h4>{{parametro8}}</h4>
+        </div>
+        <!-- <div class="col border border-dark rounded p-3 mb-2 bg-light text-dark">
+            <a class="btn btn-outline-success btn-lg" href="{{ url_for('Ima4') }}" role="button">Visualizar imagen</a>
+        </div> -->
+
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

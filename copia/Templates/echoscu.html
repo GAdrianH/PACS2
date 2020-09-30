@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row justify-content-center h-100">
+  <div class="jumbotron text-center col-sm-5 col-md-5 ">
+    <h1 class="display-3 ">Para enviar el "Rq", de le click al boton. </h1>
+    <a class="btn btn-success btn-lg" href="{{ url_for('echosr') }}" role="button">C-Echo</a>
+
+  </div>
+
+  <div class="jumbotron text-center col-sm-5 offset-sm-2 col-md-5 offset-md-1">
+    <h1 class="display-5 ">Cuando el boton quede iluminado signfica que el service class user se encuentra enviando la solicitud de asociación. </h1>
+
+  </div>
+</div>
+{% endblock %}

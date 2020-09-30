@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TelePacs</title>
+    <link rel="shortcut icon" href="../static/imagenes/logo.ico ">
+    <!-- ARCHIVO CSS -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detalles.css') }}">
+
+    <!-- BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+    <div class="container p-2">
+        <div class="row row-cols-3">
+            <div class="col"></div>
+            <div class="col">
+                <div class="jumbotron jumbotron-fluid rounded">
+                    <div class="form-signin text-center p-3">
+                        <form action="/usuario" method="POST">
+                            <img class="rounded m-4" src="../static/imagenes/logo2.jpg" alt="" width="110" height="110">
+                            <h3 class=" mb-3 font-weight-normal font-weight-lighter ">Porfavor iniciar sesión</h3>
+                            <label for="inputEmail" class="sr-only">Usuario</label>
+                            <input type="text" name="usuarios" class="form-control" placeholder="Usuario" required
+                                autofocus>
+                            <label for="inputPassword" class="sr-only">contraseña</label>
+                            <input type="password" name="Password" class="form-control" placeholder="contraseña" required>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                            <p class="mt-5 mb-3  font-weight-lighter"> UAN - 2020</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+    
+        </div>
+    </div>
+    
+
+    
+
+</body>    
+
+

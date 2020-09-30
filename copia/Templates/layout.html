@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TelePacs</title>
+    <link rel="shortcut icon" href="../static/imagenes/logo.ico ">
+    <!-- ARCHIVO CSS -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detalles.css') }}">
+
+    <!-- BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="/Iniciar">TelePacs</a>
+        </li>
+        <!-- COMANDOS PARA SCU -->
+        <li class="nav-item dropdown ml-auto">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false"> Personal de la salud</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/echoScu">Comprobar conexión</a>
+                <a class="dropdown-item" href="/StoreScu">Enviar imagen</a>
+                <a class="dropdown-item" href="/GetScu">Recibir imagen</a>
+                <a class="dropdown-item" href="/FindScu">Buscar información</a>
+                <a class="dropdown-item" href="/MoveScu">Recibir imagen (Segura)</a>
+                <a class="dropdown-item" href="/MwlScu">Lista de trabajo</a>
+            </div>
+        </li>
+        <!-- COMANDOS PARA SCP -->
+        <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false"> Data center</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/echoScp">Abrir conexión</a>
+                <a class="dropdown-item" href="/StoreScp">Esperar imagen</a>
+                <a class="dropdown-item" href="/GetScp">Habilitar envío de imagen</a>
+                <a class="dropdown-item" href="/FindScp">Habilitar busqueda</a>
+                <a class="dropdown-item" href="/MoveScp">Habilitar envío de imagen (Segura)</a>
+                <a class="dropdown-item" href="/MwlScp">Iniciar lista de trabajo</a>
+                <!-- <a class="dropdown-item" href="/ScpActivos">Activar todos</a> -->
+            </div>
+
+        </li>
+
+        <li class="nav-item dropleft ">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false"> Operaciones BD</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/MySQl"> Imagenes </a>
+                <a class="dropdown-item" href="/MySQl_Informe">Informes</a>
+            </div>
+
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="/cerrar" role="button" aria-haspopup="true" aria-expanded="false"> Cerrar sesión</a>
+
+        </li>
+
+
+    </ul>
+
+
+    <div class="container p-4">
+        {% block content %}
+        {% endblock%}
+
+        <div>
+
+            <h1>{{mensaje}}</h1>
+
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>

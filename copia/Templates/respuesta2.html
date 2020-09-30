@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center h-100">
+    <div class="jumbotron jumbotron-fluid text-center col-sm-5 col-md-5">
+        <div class="container">
+            <h1 class="display-4">{{solucion}}</h1>
+            <p class="lead">{{parametro1}}</p>
+        </div>
+    </div>
+
+    <div class="jumbotron text-center col-sm-5 offset-sm-2 col-md-5 offset-md-1">
+        <div class="container">
+            <h1 class="display-4">Información de la imagen:</h1>
+            <h4>Nombre del paciente:</h4>
+            <p class="lead">{{parametro2}}</p>
+            <h4>Modalidad:</h4>
+            <p class="lead">{{parametro3}}</p>
+            <h4>Fecha del estudio:</h4>
+            <p class="lead">{{parametro4}}</p>
+            <h4>Nombre del protocolo:</h4>
+            <p class="lead">{{parametro5}}</p>
+            <h4>Descripción del estudio:</h4>
+            <p class="lead">{{parametro6}}</p>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="jumbotron text-center ">
+    <div>
+
+        <h5 class="display-5 ">Oprima el boton para poder desplegar la imagen. </h1>
+            <a class="btn btn-success btn-lg" href="{{ url_for('imagenabrir') }}" role="button">Visualizar</a>
+
+    </div>
+    <hr class="my-4">
+    <form action="/informe" method="POST">
+
+        <div>
+            <h5 class="display-5 ">Reporte medico: </h1>
+                <div class="input-group mb-3">
+                    
+                    <input name = "informe" class="form-control form-control-lg" aria-label="With textarea" placeholder="Ingrese reporte">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+                    </div>
+                </div>
+
+        </div>
+    </form>
+
+</div>
+
+
+{% endblock %}

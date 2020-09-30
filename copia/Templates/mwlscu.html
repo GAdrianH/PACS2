@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="col-sm-12">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <h1 class="display-4">C-Modality worklist-rq</h1>
+        </div>
+    </div>
+</div>
+
+
+<form action = "/mwlScu_ejecutando" method="POST">
+    <div class="form-group text-white">
+      <label for="exampleInputEmail1">Nombre del paciente</label>
+      <input name = "nombrepaci" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" >
+      <small id="r" class="form-text text-muted">Toda la información suminitrada se encuentra en la imagen DICOM </small>
+    </div>
+    <div class="form-group text-white">
+      <label for="exampleInputPassword1">Instancias UID del estudio</label>
+      <input name= "modalidad"  type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" >>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center h-100">
+  <div class="jumbotron text-center col-sm-5 col-md-5 ">
+    <h1 class="display-3 ">Para comenzar a escuchar, de le click al boton. </h1>
+    <a class="btn btn-success btn-lg" href="{{ url_for('imagenabrir') }}" role="button">Modality worklist</a>
+
+  </div>
+
+  <div class="jumbotron text-center col-sm-5 offset-sm-2 col-md-5 offset-md-1">
+    <h1 class="display-5 ">Cuando el boton quede iluminado signfica que el service class provider se encuentra escuchando continuamente, si lo desea puede salir de la pagina. </h1>
+
+  </div>
+</div>
+{% endblock %}

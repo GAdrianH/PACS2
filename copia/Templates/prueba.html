@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+
+  <div class="form-group text-white">
+
+    <div class="input-group mb-3">
+  
+      <div class="custom-file">
+        <input type="file" name="archivo" class="m-4" >
+        
+        <button type="submit" class="btn btn-info m-4">Enviar</button>
+      </div>
+    </div>
+
+
+  </div>
+</form>
+
+
+{% endblock %}

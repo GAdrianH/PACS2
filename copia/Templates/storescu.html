@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="col-sm-12">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <h1 class="display-4">C-Store-rq</h1>
+        </div>
+    </div>
+</div>
+
+
+<form action = "/storeScu_ejecutando" method="POST">
+    <div class="form-group text-white">
+      <label for="exampleInputEmail1">Nombre del la imagen</label>
+      <input name = "nombredcm" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" >
+      <small id="emailHelp" class="form-text text-muted">Al ingresar el nombre de la imagen porfavor colocar al final ".dcm".</small>
+    </div>
+    <div class="form-group text-white">
+      <label for="exampleInputPassword1">Ip de destino</label>
+      <input name= "dcmip"  type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" >>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+{% endblock %}
